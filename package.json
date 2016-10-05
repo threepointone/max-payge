@@ -1,0 +1,42 @@
+{
+  "name": "@threepointone/max-payge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config example/webpack.config.js --content-base example/ --history-api-fallback --compress --inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-template": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.7.1",
+    "eslint-config-rackt": "^1.1.1",
+    "eslint-plugin-react": "^6.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "rackt"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "react/jsx-uses-vars": "error",
+      "react/jsx-uses-react": "error"
+    }
+  }
+}
