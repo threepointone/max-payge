@@ -1,6 +1,8 @@
 max-payge
 ---
 
+`npm install && npm start`
+
 a POC where this works -
 ```jsx
 <Page pattern="/about" component="./AboutPage.jsx" />
