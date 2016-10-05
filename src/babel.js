@@ -9,7 +9,6 @@ let template = require('babel-template')
 let TRUE = template('true')
 
 function replace(attr) {
-  console.log(attr)
   return template(`callback => require.ensure([], require => {
   let success = false, ret
   try{
@@ -39,7 +38,6 @@ module.exports = function ({ types: t }) {
             attr.name.name === 'include').length > 0
           
           if(!included) {
-            console.log('swapping')
             path.node.openingElement.attributes.forEach((attr, i) => {
               if(attr.name.name === 'component') {
                 path.node.openingElement.attributes[i] = t.jSXAttribute(t.jSXIdentifier('component'), t.jSXExpressionContainer(replace(attr).expression))
